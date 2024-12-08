@@ -1,0 +1,47 @@
+/* Estilos generales */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Formulario */
+#form-signup {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mensajes de error */
+#error-username-required,
+#error-password-required,
+#error-password-confirm-required,
+#error-password-match-required {
+    color: red;
+    font-size: 0.875rem;
+    display: none;
+}
+
+/* Botón de enviar */
+button[type="submit"] {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    #form-signup {
+        padding: 1.5rem;
+    }
+}

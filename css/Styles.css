@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1rem;
+}
+
+/* Menú a la izquierda */
+.navbar-nav .nav-item {
+  padding-right: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: aquamarine;
+}
+
+/* Ja Morant al centro */
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Nombre a la derecha */
+.navbar-right {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Estilo para el nombre en el header alineado a la derecha */
+.navbar-right h1 {
+  font-family: 'Arial', sans-serif;  /* Fuente similar a la usada en Ja Morant */
+  color: aquamarine;  /* El mismo color */
+  font-size: 2rem;  /* Tamaño similar */
+  font-weight: bold;  /* Negrita para el nombre */
+}
+
+/* Main Section */
+.text-center h1,
+.text-center h3 {
+  margin-bottom: 1rem;
+}
+
+.text-center p {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.row img {
+  border: 2px solid #333;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.row img:hover {
+  transform: scale(1.05);
+  border-color: aquamarine;
+}
+
+/* Estilo para el parallax */
+.parallax {
+  background-image: url('path_to_image.jpg');
+  height: 500px; /* Altura del efecto parallax */
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: white;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Estilo para móviles */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .item, .body-item {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .text {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  /* Menú hamburguesa */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Estilo para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .item, .body-item {
+    width: 48%;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
+  /* Menú hamburguesa */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Estilo para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .item, .body-item {
+    width: 30%;
+  }
+}
