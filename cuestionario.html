@@ -1,81 +1,53 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD de Productos</title>
+    <title>Formulario de Registro</title>
 
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 
-    <!-- Mi propio archivo de estilos -->
-    <link rel="stylesheet" href="css/crud.css">
+    <!-- My own styles -->
+    <link rel="stylesheet" href="css/cuestionario.css">
 
-    <!-- Mi propio archivo de scripts -->
-    <script src="js/crud.js" defer></script>
+    <!-- My own scripts -->
+    <script src="js/cuestionario.js" defer></script>
+
 </head>
 
 <body>
-  <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <!-- Nombre centralizado en todas las resoluciones -->
-            <a class="navbar-brand mx-auto" href="index.html">Ja Morant</a>
+    <div class="container">
+        <h2 class="text-center my-4">Formulario de Registro</h2>
 
-            <!-- Botón de colapso para móviles -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Menú colapsable -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="zapatillas.html">Zapatillas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="history.html">Historia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Crud.html">Crud</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cuestionario.html">Cuestionario</a>
-                    </li>
-                </ul>
-                <div class="ms-auto d-none d-lg-block">
-                    <a class="navbar-brand" href="#">Jorge </a> 
-                </div>
+        <form action="form_response.html" id="form-signup" method="POST">
+            <!-- Nombre de usuario -->
+            <div class="form-group mb-3">
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" id="username" name="username" class="form-control" />
+                <span id="error-username-required" class="text-danger" style="display: none;">* Error: nombre de usuario obligatorio</span>
             </div>
-        </div>
-    </nav>
-</header>
 
-<div class="container my-5">
-    <h2 class="text-center mb-4">Gestión de Productos</h2>
+            <!-- Contraseña -->
+            <div class="form-group mb-3">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" class="form-control" />
+                <span id="error-password-required" class="text-danger" style="display: none;">* Error: contraseña obligatoria</span>
+            </div>
 
-    <!-- Botón para ir a la página de gestión -->
-    <div class="text-end mb-3">
-        <a href="manage.html" class="btn btn-primary">Añadir Producto</a>
+            <!-- Confirmación de Contraseña -->
+            <div class="form-group mb-3">
+                <label for="password-confirm">Confirmación de Contraseña</label>
+                <input type="password" id="password-confirm" name="password-confirm" class="form-control" />
+                <span id="error-password-confirm-required" class="text-danger" style="display: none;">* Error: confirmar contraseña</span>
+                <span id="error-password-match-required" class="text-danger" style="display: none;">* Error: las contraseñas no coinciden</span>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
     </div>
-
-    <!-- Tabla de productos -->
-    <h4>Lista de Productos</h4>
-    <table class="table table-striped" id="products-table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody id="products-list">
-            <!-- Los productos se cargarán dinámicamente aquí -->
-        </tbody>
-    </table>
-</div>
 </body>
+
 </html>
